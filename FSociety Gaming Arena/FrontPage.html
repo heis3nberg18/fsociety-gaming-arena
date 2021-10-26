@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="w3.css">
+<style>
+#main {
+ background-color: #33FF00;
+   color: black;
+}
+nav{
+width:100%
+height:60px;
+background-color: black;
+list-style:none;
+}
+
+nav ul{
+        float:right;
+        margin-right: 20px;
+}
+  nav ul li {
+  float:left;
+        list-style-type:none;
+        display:inline-block;
+        color: #F3F3F3;
+        text-align: center;
+        padding: 15px 16px;
+        text-decoration: none;
+        font-size: 17px;
+	    transition: 0.8s all;
+	    
+}
+
+nav ul li ul li {
+list-style-type:none;
+        display:inline-block;
+        color: #F3F3F3;
+        text-align: center;
+        padding: 15px 16px;
+        text-decoration: none;
+        font-size: 17px;
+	    transition: 0.8s all;
+display none;
+}
+ nav ul li:hover ul li{
+  background-color: #33FF00;
+   color: black;
+display: inline-block;
+}
+nav ul li a {
+text-decoration:none;
+color: white;
+padding:15px 16px;
+}
+  nav ul li:hover {
+    background-color: #33FF00;
+   color: black;
+}
+
+
+nav  ul li.active {
+    background-color: #4CAF50;
+    color: white;
+} 
+
+</style> 
+</head>
+<body>
+<!--
+<div id="main">
+<nav>
+  <ul>
+  <li><a href="#home" text-align:right>Home</a></li>
+  <li><a href="#events">Events</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> 
+</nav>
+</div>
+--> 
+<div id="main">
+<nav>
+   <img src="logo.jpg""width="400" height="90">
+ <ul>
+     <li><a href="#home" >Buy</a></li>
+     <li><a href="#band" >Book A Slot</a>
+ <!--    <ul>
+             <li><a href="#tour" >Book Your Slot </a></li>
+             <li><a href="#tour" >Buy Games </a></li>
+             <li><a href="#tour" >Rent Components </a></li>
+      </ul> -->
+ </li>
+<li><a href="#contact" >Game Library</a></li>
+<li><a href="#contact" >Contact Us</a></li>
+<li><a href="login.html"   target="_blank">Login</a></li>
+<li><a href="signup.html"  target="_blank">SignUp</a></li>
+</ul> 
+</nav>
+<!--
+</div id="ex">
+    <slider>
+             <slide><p><a href="signup.html" >ABCD</a> </p></slide>
+		     <slide><p>DEFF</p></slide>
+		     <slide><p>DFDF</slide>
+			 <slide><p>FDGRGRDG</p></slide>
+	</slider>
+</div>	-->
+<div>
+<img class="mySlides" src="cafe.jpg" style="width:100%">
+<img class="mySlides" src="arknemesis1.jpg" style="width:100%">
+<img class="mySlides" src="cpu.jpg" style="width:100%">
+<img class="mySlides" src="gaming.jpg" style="width:100%>
+<img class="mySlides" src="bg.jpg" style="width:100%">
+<img class="mySlides" src="keyboard.jpg" style="width:100%">
+</div>
+<script>
+// slideshow code
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+</body>
+</html>
